@@ -6,18 +6,19 @@ var express = require('express');   // We are using the express library for the 
 var app = express();            // We need to instantiate an express object to interact with the server in our code
 PORT = 9852;                 // Set a port number at the top so it's easy to change in the future
 // Database
-var db = require('./db-connector')
+//var db = require('./db-connector')
 
 /*
     ROUTES
 */
+const path = require('path');
 app.get('/', function (req, res) {
-
-
-
-
+    res.sendFile(path.join(__dirname, '/index.html'));
 });
 
+app.get('/campaigns', function (req, res) {
+    res.sendFile(path.join(__dirname, '/campaigns.html'));
+});
 /*
     LISTENER
 */
