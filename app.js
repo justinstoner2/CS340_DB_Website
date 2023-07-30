@@ -13,11 +13,11 @@ PORT = 9852;                 // Set a port number at the top so it's easy to cha
 */
 const path = require('path');
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, '/Pages/index.html'));
 });
 
 app.get('/campaigns', function (req, res) {
-    res.sendFile(path.join(__dirname, '/campaigns.html'));
+    res.sendFile(path.join(__dirname, 'Pages/campaigns.html'));
 });
 /*
     LISTENER
